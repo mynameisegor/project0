@@ -1,3 +1,5 @@
+'use strict';
+
 const nomberOfFilms = +prompt('сколько фильмов вы уже посмотрели?', '');
 
 const personalMovieDB = {
@@ -23,6 +25,16 @@ for (let i = 0; i < 2; i++) {
         }
 
          
+}
+
+if (personalMovieDB.count < 10){
+    console.log('просмотренно слишком мало фильмов');
+} else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
+    console.log("вы классный зритель!");
+} else if (personalMovieDB.count >= 30) {
+    console.log("вы киноман!");
+} else {
+    console.log("Произлоша ошибка:((((");
 }
 
 console.log(personalMovieDB); 
